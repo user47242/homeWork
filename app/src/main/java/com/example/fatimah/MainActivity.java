@@ -29,24 +29,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 img.setY(img.getY()-5);
+                if(img.getY()<66)
+                    img.setImageResource(R.drawable.sad);
+                else
+                    img.setImageResource(R.drawable.happy);
             }
         });
         down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 img.setY(img.getY()+5);
+                if(img.getY()>400)
+                    img.setImageResource(R.drawable.sad);
+                else
+                    img.setImageResource(R.drawable.happy);
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 img.setX(img.getX()-5);
+                if(img.getX()<60)
+                    img.setImageResource(R.drawable.sad);
+                else
+                    img.setImageResource(R.drawable.happy);
             }
         });
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 img.setX(img.getX()+5);
+                if(img.getX()>370)
+                    img.setImageResource(R.drawable.sad);
+                else
+                    img.setImageResource(R.drawable.happy);
             }
         });
 
